@@ -8,13 +8,12 @@ const connection = mysql.createConnection({
   database: 'nodejs'
 });
 
-// simple query
-connection.query(
+/* connection.query(
   'SELECT * FROM `user`',
   function(err, results, fields) {
     console.log('<< CHECK MYSQL >>');
-    console.log(results); // results contains rows returned by server
+    console.log(results); 
   }
-);
+); */
 
 export default connection;
