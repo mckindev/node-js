@@ -11,11 +11,12 @@ let getHomepage = (req, res) => {
             data.push({
             id: row.id,
             username: row.username,
-            anddress: row.anddress,
+            address: row.address,
             phone: row.phone
           })  
         });
-            return res.render('index.ejs', { dataUser: JSON.stringify(data) });
+            console.log(' >> CHECK MYSQL: ', data);
+            return res.render('index.ejs', { dataUser: data });
         }
     );
 }
